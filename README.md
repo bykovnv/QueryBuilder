@@ -88,7 +88,7 @@ array(1) {
 Метод  create создает запись в таблице $table.
 
 ```php
-$db->create(string $table,array $data): bool
+$db->create(string $table,array $data): bool;
 ```
 **пример:**
 ```php
@@ -115,18 +115,40 @@ array(1) {
 
 Меток update меняет данные в таблице users, данные получается из массива $data и выбранной строке по $id.
 ```php
-$db->update('users', '$data', $id);
-// $data получаем из $_POST;
-// $id получаем из $_GET;
+$db->update(string $table, array $data, string $id): bool;
+```
+**пример:**
+```php
+$db->update('users', 1);
+```
+возвращает массив 
+```php
+array(1) {
+  [0]=>
+  array(4) {
+    ["id"]=>
+    string(1) "1"
+    ["name"]=>
+    string(3) "Nik"
+    ["surname"]=>
+    string(5) "Bykov"
+    ["handle"]=>
+    string(10) "nickbykov2"
+  }
+}
 ```
 
 # deleteOne
 
 Метод delete удаляет строку по $id из таблицы users.
 ```php
-$db->deleteOne('users', $id);
-// $id получаем из $_GET;
+$db->deleteOne(string $table, string $id): bool;
 ```
+**пример:**
+```php
+$db->deleteOne('users', 1);
+```
+Удаляет строку с id = 1
 
 
 

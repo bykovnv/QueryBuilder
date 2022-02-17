@@ -10,7 +10,7 @@ $config = include 'config.php';
 Устаналивается соедение с базой и возвращает объект PDO
 ```php
 include 'database/Connection.php';
-```php
+```
 Подключаем QueryBuilder 
 ```php
 include 'database/QueryBuilder.php';
@@ -18,7 +18,7 @@ include 'database/QueryBuilder.php';
 Создаем класс
 ```php
 $db = new QueryBuilder(Connection::make($config['database']));
-```php
+```
 # getAll
 Метод getAll - возвращает массив со всеми данными из таблицы users.
 ```php

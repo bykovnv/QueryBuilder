@@ -25,7 +25,11 @@ ____
 ```php
 $users = $db->getAll(string $table); 
 ```
-![PHP]
+пример:
+```php
+$users = $db->getAll('users');
+```
+возвращает массив 
 
 # getOne
 

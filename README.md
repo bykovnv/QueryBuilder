@@ -31,7 +31,7 @@ $users = $db->getAll('users');
 ```
 возвращает массив 
 ```php
-array(3) {
+array(2) {
   [0]=>
   array(4) {
     ["id"]=>
@@ -58,18 +58,57 @@ array(3) {
 ```
 # getOne
 
-Метод getOne - возвращает массив одной записи (одного пользователя) из таблицы users.
+Метод getOne - возвращает массив одной записи (одного пользователя) из таблицы $table.
 ```php
-$user = $db->getOne('users', $id); 
-//$id получаем из $_GET;
+$user = $db->getOne(string $table,string $id): array;; 
 ```
+**пример:**
+```php
+$users = $db->getOne('users', 1);
+```
+возвращает массив 
+```php
+array(1) {
+  [0]=>
+  array(4) {
+    ["id"]=>
+    string(1) "1"
+    ["name"]=>
+    string(3) "Nik"
+    ["surname"]=>
+    string(5) "Bykov"
+    ["handle"]=>
+    string(10) "nickbykov2"
+  }
+}
+```
+
 # create
 
-Метод  create создает запись в таблице 'users'.
+Метод  create создает запись в таблице $table.
 
 ```php
-$db->create('users', $data)
-// $data получаем из $_POST;
+$db->create(string $table,array $data): bool
+```
+**пример:**
+```php
+$db->create('users', 1);
+```
+возвращает массив 
+```php
+array(1) {
+  [0]=>
+  array(4) {
+    ["id"]=>
+    string(1) "1"
+    ["name"]=>
+    string(3) "Nik"
+    ["surname"]=>
+    string(5) "Bykov"
+    ["handle"]=>
+    string(10) "nickbykov2"
+  }
+}
 ```
 
 # update

@@ -31,6 +31,15 @@ $users = $db->getAll('users');
 $user = $db->getOne('users', $id); 
 //$id получаем из $_GET;
 ```
+# create
+
+Метод  create создает запись в таблице 'users'.
+
+```php
+$db->create('users', $data)
+// $data получаем из $_POST;
+```
+
 # update
 
 Меток update меняет данные в таблице users, данные получается из массива $data и выбранной строке по $id.

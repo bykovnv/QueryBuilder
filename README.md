@@ -31,11 +31,30 @@ $users = $db->getAll('users');
 ```
 возвращает массив 
 ```php
-[
-    'id' => 1,
-    'name' => 'Ivan',
-    'surname' => 'Ivanov',
-]
+array(3) {
+  [0]=>
+  array(4) {
+    ["id"]=>
+    string(1) "1"
+    ["name"]=>
+    string(3) "Nik"
+    ["surname"]=>
+    string(5) "Bykov"
+    ["handle"]=>
+    string(10) "nickbykov2"
+  }
+  [1]=>
+  array(4) {
+    ["id"]=>
+    string(1) "3"
+    ["name"]=>
+    string(4) "Alex"
+    ["surname"]=>
+    string(5) "Bykov"
+    ["handle"]=>
+    string(10) "alexbykov2"
+  }
+}
 ```
 # getOne
 

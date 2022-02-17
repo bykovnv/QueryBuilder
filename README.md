@@ -3,7 +3,9 @@
 
 Указываем настройки для подключение к базе: server, database, charset, login, password.
 
+```
 $config = include 'config.php';
+```
 
 Устаналивается соедение с базой и возвращает объект PDO
 

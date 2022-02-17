@@ -19,6 +19,7 @@ include 'database/QueryBuilder.php';
 ```php
 $db = new QueryBuilder(Connection::make($config['database']));
 ```
+____
 # getAll
 Метод getAll - возвращает массив со всеми данными из таблицы users.
 ```php

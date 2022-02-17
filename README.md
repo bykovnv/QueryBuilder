@@ -21,10 +21,12 @@ $db = new QueryBuilder(Connection::make($config['database']));
 ```
 ____
 # getAll
-Метод getAll - возвращает массив со всеми данными из таблицы users.
+Метод getAll - возвращает массив со всеми данными из таблицы $table.
 ```php
-$users = $db->getAll('users'); 
+$users = $db->getAll(string $table); 
 ```
+![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+
 # getOne
 
 Метод getOne - возвращает массив одной записи (одного пользователя) из таблицы users.

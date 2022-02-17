@@ -23,14 +23,20 @@ ____
 # getAll
 Метод getAll - возвращает массив со всеми данными из таблицы $table.
 ```php
-$users = $db->getAll(string $table); 
+$users = $db->getAll(string $table)): array; 
 ```
-пример:
+**пример:**
 ```php
 $users = $db->getAll('users');
 ```
 возвращает массив 
-
+```php
+[
+    'id' => 1,
+    'name' => 'Ivan',
+    'surname' => 'Ivanov',
+]
+```
 # getOne
 
 Метод getOne - возвращает массив одной записи (одного пользователя) из таблицы users.

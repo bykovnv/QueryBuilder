@@ -60,7 +60,7 @@ array(2) {
 
 Метод getOne - возвращает массив одной записи (одного пользователя) из таблицы $table.
 ```php
-$user = $db->getOne(string $table,string $id): array;; 
+$user = $db->getOne(string $table,string $id): array; 
 ```
 **пример:**
 ```php

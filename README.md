@@ -119,23 +119,11 @@ $db->update(string $table, array $data, string $id): bool;
 ```
 **пример:**
 ```php
-$db->update('users', 1);
-```
-возвращает массив 
-```php
-array(1) {
-  [0]=>
-  array(4) {
-    ["id"]=>
-    string(1) "1"
-    ["name"]=>
-    string(3) "Nik"
-    ["surname"]=>
-    string(5) "Bykov"
-    ["handle"]=>
-    string(10) "nickbykov2"
-  }
-}
+$db->update('users', 
+[
+    'name' => 'Ivan',
+    'surname' => Bykov)
+]    ;
 ```
 
 # deleteOne

@@ -92,24 +92,12 @@ $db->create(string $table,array $data): bool;
 ```
 **пример:**
 ```php
-$db->create('users', 1);
+$db->create('users', 
+[
+    'name' => 'Alex',
+    'surname' => 'Bykov']);
 ```
 возвращает массив 
-```php
-array(1) {
-  [0]=>
-  array(4) {
-    ["id"]=>
-    string(1) "1"
-    ["name"]=>
-    string(3) "Nik"
-    ["surname"]=>
-    string(5) "Bykov"
-    ["handle"]=>
-    string(10) "nickbykov2"
-  }
-}
-```
 
 # update
 
@@ -122,8 +110,7 @@ $db->update(string $table, array $data, string $id): bool;
 $db->update('users', 
 [
     'name' => 'Ivan',
-    'surname' => Bykov)
-]    ;
+    'surname' => 'Bykov']), 1;
 ```
 
 # deleteOne

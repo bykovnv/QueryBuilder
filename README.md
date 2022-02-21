@@ -97,7 +97,7 @@ $db->create('users',
     'name' => 'Alex',
     'surname' => 'Bykov']);
 ```
-возвращает массив 
+
 
 # update
 
